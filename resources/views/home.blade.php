@@ -8,5 +8,12 @@
 </head>
 <body>
     <p> 안녕? 라라벨! 잘해보자! </p>
+    <p>안녕하세요!
+@if (Auth::check())
+    {{ \Auth::user()->name }}님</p>
+    <p><a href="/logout">로그아웃</a></p>
+@else
+    게스트님</p>
+
 </body>
 </html>
