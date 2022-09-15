@@ -1,5 +1,6 @@
 <?php
 
+// 엔트리 포인트
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
@@ -32,6 +33,7 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 */
 
 require __DIR__.'/../vendor/autoload.php';
+// 오토로더 임포트, 로딩 
 
 /*
 |--------------------------------------------------------------------------
