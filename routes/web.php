@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function () {
+    return view('home'); // home.blade.php 파일
+});
+
+Route::get(
+    '/register', // 요청 주소
+    [App\Http\Controllers\RegisterController::class, 'create']
+    // [컨트롤러클래스명::class, 메서드명]
+)->middleware('guest')->name('register');
+
+Route::post(
+    '/register',
+    [App\Http\Controllers\RegisterController::class, 'store']
+)->middleware('guest');
